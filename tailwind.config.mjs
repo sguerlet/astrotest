@@ -20,7 +20,8 @@ export default {
     },
     // Font weights
     {
-      pattern: /font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)/,
+      pattern:
+        /font-(thin|extralight|light|normal|medium|semibold|bold|extrabold|black)/,
     },
     // Alignments
     {
@@ -32,7 +33,7 @@ export default {
       colors: {
         transparent: "transparent",
         primary: {
-          50:  "#e6f6f7",
+          50: "#e6f6f7",
           100: "#b8e3e6",
           200: "#8ad0d6",
           300: "#5dbdc5",
@@ -44,7 +45,7 @@ export default {
           900: "#05191a",
         },
         secondary: {
-          50:  "#f3f8f6",
+          50: "#f3f8f6",
           100: "#d0ece2",
           200: "#a6e0cb",
           300: "#7cd4b4",
@@ -69,7 +70,7 @@ export default {
           950: "#020617",
         },
         accent: {
-          50:  "#fff7e6",
+          50: "#fff7e6",
           100: "#ffe0b8",
           200: "#ffd08a",
           300: "#ffc05d",
@@ -94,16 +95,27 @@ export default {
           "100%": { transform: "translateY(0)", opacity: 1 },
         },
         fadeInShadowLight: {
-          "100%": { boxShadow: "0 20px 25px -5px rgba(15, 23, 42, .025), 0 8px 10px -6px rgba(15, 23, 42, .025);" },
+          "100%": {
+            boxShadow:
+              "0 20px 25px -5px rgba(15, 23, 42, .025), 0 8px 10px -6px rgba(15, 23, 42, .025);",
+          },
         },
         fadeInShadowDark: {
-          "100%": { boxShadow: "0 20px 25px -5px rgba(2, 6, 23, .25), 0 8px 10px -6px rgba(2, 6, 23, .25);" },
+          "100%": {
+            boxShadow:
+              "0 20px 25px -5px rgba(2, 6, 23, .25), 0 8px 10px -6px rgba(2, 6, 23, .25);",
+          },
+        },
+        fadeUp: {
+          "0%": { transform: "translateY(1rem)", opacity: 0 },
+          "100%": { transform: "translateY(0)", opacity: 1 },
         },
       },
       animation: {
         dropdown: "dropdown 300ms ease-in-out forwards",
         fadeInShadowLight: "fadeInShadowLight 500ms ease-in-out forwards",
         fadeInShadowDark: "fadeInShadowDark 500ms ease-in-out forwards",
+        fadeUp: "fadeUp 500ms ease-in-out forwards",
       },
     },
   },
