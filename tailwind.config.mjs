@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 import defaultTheme from "tailwindcss/defaultTheme";
+import plugin from "tailwindcss/plugin";
+import typography from "@tailwindcss/typography";
+
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   darkMode: ["selector"],
@@ -56,6 +59,18 @@ export default {
           800: "#104a35",
           900: "#08241a",
         },
+        accent: {
+          50: "#fff7e6",
+          100: "#ffe0b8",
+          200: "#ffd08a",
+          300: "#ffc05d",
+          400: "#ffb02f",
+          500: "#ff9f00",
+          600: "#cc7f00",
+          700: "#995f00",
+          800: "#664000",
+          900: "#332000",
+        },
         neutral: {
           50: "#f8fafc",
           100: "#f1f5f9",
@@ -68,18 +83,6 @@ export default {
           800: "#1e293b",
           900: "#0f172a",
           950: "#020617",
-        },
-        accent: {
-          50: "#fff7e6",
-          100: "#ffe0b8",
-          200: "#ffd08a",
-          300: "#ffc05d",
-          400: "#ffb02f",
-          500: "#ff9f00",
-          600: "#cc7f00",
-          700: "#995f00",
-          800: "#664000",
-          900: "#332000",
         },
       },
       cursor: {
@@ -123,8 +126,8 @@ export default {
     animation: ["responsive"],
   },
   plugins: [
-    require("@tailwindcss/typography"),
-    require("tailwindcss/plugin")(function ({ addVariant }) {
+    typography,
+    plugin(function ({ addVariant }) {
       addVariant("dark-me", ".dark_&");
     }),
   ],

@@ -21,9 +21,9 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'VisuDrone - Inspections techniques et prises de mesures par drone',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'VisuDrone est une entreprise spécialisée dans les inspections techniques et les prises de mesures par drone.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
