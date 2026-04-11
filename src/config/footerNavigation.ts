@@ -35,77 +35,73 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'VisuDrone',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'VisuDrone est un operateur de drones professionnels specialise dans l\'inspection technique de batiments et d\'ouvrages d\'art. Telepilote certifie DGAC, nous intervenons partout en France.',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'VisuDrone - Inspection par drone',
+			text: 'VisuDrone'
 		}
 	},
 	footerColumns: [
 		{
-			category: 'Product',
+			category: 'Nos services',
 			subCategories: [
 				{
-					subCategory: 'Features',
+					subCategory: 'Inspection de batiments',
 					subCategoryLink: '/features'
 				},
+				{
+					subCategory: 'Thermographie infrarouge',
+					subCategoryLink: '/features'
+				},
+				{
+					subCategory: 'Topographie & metre',
+					subCategoryLink: '/features'
+				},
+				{
+					subCategory: 'Modelisation 3D',
+					subCategoryLink: '/features'
+				},
+				{
+					subCategory: 'Panneaux solaires',
+					subCategoryLink: '/features'
+				}
+			]
+		},
+		{
+			category: 'Informations',
+			subCategories: [
 				{
 					subCategory: 'FAQ',
 					subCategoryLink: '/faq'
 				},
 				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
+					subCategory: 'Blog',
+					subCategoryLink: '/blog'
 				},
 				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
-				},
-				{
-					subCategory: 'Terms',
+					subCategory: 'Mentions legales',
 					subCategoryLink: '/terms'
 				}
 			]
 		},
 		{
-			category: 'About us',
+			category: 'Contact',
 			subCategories: [
 				{
-					subCategory: 'About us',
-					subCategoryLink: '/'
-				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
-				}
-			]
-		},
-		{
-			category: 'Get in touch',
-			subCategories: [
-				{
-					subCategory: 'Contact',
+					subCategory: 'Demander un devis',
 					subCategoryLink: '/contact'
 				},
 				{
-					subCategory: 'Support',
-					subCategoryLink: '/contact'
-				},
-				{
-					subCategory: 'Join us',
+					subCategory: 'Nous contacter',
 					subCategoryLink: '/contact'
 				}
 			]
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '\u00a9 VisuDrone 2026.'
 	}
 }

@@ -12,7 +12,9 @@ import Col from '../../ui/Col.astro'
 import Feature from '../../ui/Feature.astro'
 
 // Data
-import features from '../../../data/json-files/featuresData.json'
+import featuresRaw from '../../../data/json-files/featuresData.json'
+type FeatureItem = { title: string; icon: string; description: string; category: string }
+const features = featuresRaw as FeatureItem[]
 ---
 
 <Section id="features">

@@ -8,56 +8,52 @@ import Hero from '../components/blocks/hero/PageHeader.astro'
 import CTA from '../components/blocks/CTA/BasicDark.astro'
 
 // Data
-import featuresData from '../data/json-files/featuresData.json'
+import featuresRaw from '../data/json-files/featuresData.json'
+type FeatureItem = { title: string; icon: string; description: string; category: string }
+const featuresData = featuresRaw as FeatureItem[]
 // - Feature Categories
-const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
-const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
-const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
-const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+const featuresBatiment = featuresData.filter((feature) => feature.category === 'Batiment')
+const featuresIndustrie = featuresData.filter((feature) => feature.category === 'Industrie')
+const featuresGeomatique = featuresData.filter((feature) => feature.category === 'Geomatique')
+const featuresLivrables = featuresData.filter((feature) => feature.category === 'Livrables' || feature.category === 'Securite')
 
 // Content
 // - SEO
 const SEO = {
-	title: 'Foxi | Features to Boost Productivity & Security',
+	title: 'VisuDrone | Nos services d\'inspection par drone',
 	description:
-		"Explore Foxi's powerful features designed to enhance productivity, ensure top-notch security, and integrate seamlessly with your favorite tools. Join thousands of satisfied users and transform your workflow with Foxi today!"
+		'Decouvrez tous nos services : inspection de batiments et facades, thermographie infrarouge, topographie RTK, modelisation 3D et rapports professionnels. Telepilote certifie DGAC.'
 }
 // - Page Header
 const header = {
-	title: 'Why you and your team will <strong>love</strong> foxi.',
-	text: 'Streamline your tasks, protect your data, and enjoy working with our tools!'
+	title: 'Des solutions drone pour chaque <strong>mission d\'inspection</strong>.',
+	text: 'Du batiment industriel au panneau solaire, nos drones captent tout ce que l\'oeil ne peut pas voir.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<Feature
-		title="Insightful Analytics"
-		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+		title="Inspection du bati"
+		text="Toitures, facades, ouvrages d'art et structures industrielles inspectes sans echafaudage ni nacelle."
+		data={featuresBatiment}
 	/>
 	<Feature
-		title="Efficiency Unleashed"
-		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
-		data={featuresSecurity}
+		title="Applications industrielles"
+		text="Pylones, reseaux, panneaux solaires et sites en exploitation surveilles avec precision et sans interruption."
+		data={featuresIndustrie}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
 	<Feature
-		title="Ultimate Data Protection"
-		text="Keep your data safe with top-notch security measures and real-time threat detection."
-		data={featuresProductivity}
+		title="Geomatique & relevés numeriques"
+		text="Topographie, orthophotographie et modelisation 3D pour vos projets d'amenagement, BIM et etudes de terrain."
+		data={featuresGeomatique}
 	/>
 	<Feature
-		title="Seamless Connectivity"
-		text="Effortlessly connect your favorite apps and automate workflows for a smoother workday."
-		data={featuresIntegrations}
+		title="Livrables & certifications"
+		text="Rapports professionnels remis sous 48h, certifies par un telepilote DGAC et conformes aux exigences des assureurs."
+		data={featuresLivrables}
 		classes="bg-neutral-50 dark:bg-neutral-900"
-	/>
-	<Feature
-		title="24/7 Expert Help"
-		text="Our friendly support team is always here to assist you with any questions or issues."
-		data={featuresSupport}
 	/>
 	<CTA />
 </Layout>

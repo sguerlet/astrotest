@@ -34,24 +34,22 @@ export interface NavData {
 export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.svg',
-		alt: 'The tailwind astro theme',
-		text: 'Foxi.'
+		alt: 'VisuDrone - Inspection par drone',
+		text: 'VisuDrone'
 	},
 	navItems: [
-		{ name: 'Home', link: '/' },
-		{ name: 'Pricing', link: '/pricing' },
-		{ name: 'Features', link: '/features' },
+		{ name: 'Accueil', link: '/' },
+		{ name: 'Services', link: '/features' },
 		{
-			name: 'Resources',
+			name: 'Ressources',
 			link: '#',
 			submenu: [
 				{ name: 'Blog', link: '/blog' },
-				{ name: 'Changelog', link: '/changelog' },
 				{ name: 'FAQ', link: '/faq' },
-				{ name: 'Terms', link: '/terms' }
+				{ name: 'Mentions legales', link: '/terms' }
 			]
 		},
 		{ name: 'Contact', link: '/contact' }
 	],
-	navActions: [{ name: 'Try it now', link: '/', style: 'primary', size: 'lg' }]
+	navActions: [{ name: 'Devis gratuit', link: '/contact', style: 'primary', size: 'lg' }]
 }
